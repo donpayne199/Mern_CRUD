@@ -8,13 +8,6 @@ const Users = () => {
       id: 1,
       name: "don",
       email: "User1@gmail.com",
-      age: 59,
-    },
-    {
-      id: 2,
-      name: "randy",
-      email: "User2@gmail.com",
-      age: 25,
     },
   ]);
 
