@@ -25,9 +25,6 @@ const Users = () => {
                   <div className="individual-div">
                     {user.email}
                   </div>
-                  <div className="individual-div">
-                    {user.age}
-                  </div>
 
                   <Link
                     to="/update"

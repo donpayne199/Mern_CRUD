@@ -39,14 +39,6 @@ const CreateUser = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="anInput">
-          <input
-            type="text"
-            placeholder="Enter Age"
-            className="form-controls"
-            onChange={(e) => setAge(e.target.value)}
-          />
-        </div>
         <button className="submit-btn">Submit</button>
       </form>
     </>
