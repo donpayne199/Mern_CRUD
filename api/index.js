@@ -9,11 +9,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/users", userRouter);
+app.use("/users", userRouter);
 
-const DB = process.env.DATABASE.replace("<PASSWORD>", process.env.DATABASE_PASSWORD);
+const DB = process.env.DATABASE.replace(
+  "<PASSWORD>",
+  process.env.DATABASE_PASSWORD
+);
 
-mongoose.connect(DB).then(() => console.log("DB connected"));
+mongoose
+  .connect(DB)
+  .then(() => console.log("DB connected"));
 
 if (process.env.NODE_ENV != "production") {
   console.log("In development mode");

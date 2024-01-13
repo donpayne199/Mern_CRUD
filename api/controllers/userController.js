@@ -38,22 +38,18 @@ const getUser = (req, res) => {
 };
 
 const createUser = async (req, res) => {
-  console.log("hitit");
-  // User.create(req.body)
-  //   .then((users) => res.json(users))
-  //   .catch((err) => console.log(err));
-  // try {
-  //   const newUser = await User.create(req.body);
-  //   res.status(201).json({
-  //     status: "success",
-  //     data: { newUser },
-  //   });
-  // } catch (err) {
-  //   res.status(400).json({
-  //     status: "failed",
-  //     message: err,
-  //   });
-  // }
+  try {
+    const newUser = await User.create(req.body);
+    res.status(201).json({
+      status: "success",
+      data: { newUser },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: "failed",
+      message: err,
+    });
+  }
 };
 
 const updateUser = (req, res) => {
